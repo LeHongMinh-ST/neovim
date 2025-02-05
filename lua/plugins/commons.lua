@@ -67,4 +67,7 @@ return {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "APZelos/blamer.nvim",
+  },
 }
