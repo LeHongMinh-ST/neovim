@@ -33,8 +33,8 @@ require("lazy").setup({
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
   }, -- automatically check for plugin updates
+  notify = false, -- notify on update
   performance = {
     rtp = {
       -- disable some rtp plugins
@@ -52,11 +52,18 @@ require("lazy").setup({
   },
 })
 
+require("nightfox").setup({
+  options = {
+    transparent = true,
+    styles = {
+      sidebars = "transparent",
+      floats = "transparent",
+    },
+  },
+})
 -- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme vscode")
--- vim.cmd("colorscheme catppuccin")
-
 -- vim.cmd("colorscheme catppuccin")
 -- vim.cmd("colorscheme kanagawa")
 vim.cmd("colorscheme nightfox")
