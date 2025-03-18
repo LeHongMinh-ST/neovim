@@ -15,8 +15,8 @@ return {
             java = {
               configuration = {
                 runtimes = {
-                  { name = "JavaSE-17", path = "/path/to/java17", default = true },
-                  { name = "JavaSE-11", path = "/path/to/java11" },
+                  { name = "JavaSE-17", path = "/path/to/java17", default = false },
+                  { name = "JavaSE-21", path = "/path/to/java21", default = true },
                 },
               },
               codeGeneration = {
