@@ -86,7 +86,6 @@ return {
       },
       hooks = {
         ["lint-done"] = function(result)
-          -- Tắt thông báo từ phpcs bằng cách không hiển thị thông báo
           if result and result.linter == "phpcs" then
             vim.notify = function() end
           end
@@ -128,15 +127,27 @@ return {
   --   },
   -- },
   {
-    -- Add the blade-nav.nvim plugin which provides Goto File capabilities
-    -- for Blade files.
     "ricardoramirezr/blade-nav.nvim",
-    dependencies = {
-      "hrsh7th/nvim-cmp",
+    dependencies = { -- totally optional
+      "hrsh7th/nvim-cmp", -- if using nvim-cmp
+      { "ms-jpq/coq_nvim", branch = "coq" }, -- if using coq
     },
-    ft = { "blade", "php" },
+    ft = { "blade", "php" }, -- optional, improves startup time
+    opts = {
+      close_tag_on_complete = true,
+    },
+  },
+  {
+    "ricardoramirezr/lali-components.nvim",
+    ft = "blade",
   },
   {
     "kevinhwang91/promise-async",
+  },
+  {
+    "ccaglak/larago.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
   },
 }
