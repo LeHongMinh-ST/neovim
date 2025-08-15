@@ -46,5 +46,10 @@ end, { noremap = true, silent = true })
 -- go to errors in a file :/
 vim.keymap.set("n", "<leader>ne", vim.diagnostic.goto_next) -- next err
 vim.keymap.set("n", "<leader>pe", vim.diagnostic.goto_prev) -- previous err
+
 vim.keymap.set("n", "gb", "<cmd>GoBlade<cr>", { desc = "Go to blade file" })
 vim.keymap.set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "Import class" })
+
+vim.keymap.set("n", "<leader>F", function()
+  require("conform").format({ async = true })
+end, { desc = "Format file" })
