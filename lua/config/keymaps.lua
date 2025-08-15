@@ -53,3 +53,7 @@ vim.keymap.set("n", "<leader>ii", vim.lsp.buf.code_action, { desc = "Import clas
 vim.keymap.set("n", "<leader>F", function()
   require("conform").format({ async = true })
 end, { desc = "Format file" })
+
+-- move selected lines
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
