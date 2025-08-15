@@ -61,7 +61,8 @@ require("nightfox").setup({
     },
   },
 })
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme darcula-dark")
+-- vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme vscode")
 -- vim.cmd("colorscheme catppuccin")
